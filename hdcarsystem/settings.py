@@ -65,7 +65,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'hdcar',
         'USER': 'root',
-        'PASSWORD': 'zxc1122330',
+        'PASSWORD': 'snhhxbd20073',
         'HOST': '127.0.0.1',
         'PORT': '3306',
     }
@@ -130,7 +130,7 @@ LOGGING = {
             'class': 'handlers.handlers.DatabaseHandler',
             'db_host': '127.0.0.1',
             'db_user': 'root',
-            'db_pass': 'zxc1122330',
+            'db_pass': 'snhhxbd20073',
             'db': 'hdcar',
         },
         'console': {

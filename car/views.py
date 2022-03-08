@@ -398,7 +398,7 @@ def get_ip(request):
 def makeLog(ip):
     import pymysql
     # 打开数据库连接
-    db = pymysql.connect("localhost", "root", "zxc1122330", "hdcar")
+    db = pymysql.connect("localhost", "root", "snhhxbd20073", "hdcar")
     # 使用 cursor() 方法创建一个游标对象 cursor
     cursor = db.cursor()
     # 行为字典
