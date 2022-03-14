@@ -573,6 +573,34 @@ def add_userinfo(request):
         else:
             return render(request, 'admin/userManage.html')
 
+def add_user(request):
+    if request.method == "POST":
+        name = request.POST['name']
+        sex = request.POST['sex']
+        job = request.POST['job']
+        idcard = request.POST['idcard']
+        phone = request.POST['phone']
+        quanxian = request.POST['quanxian']
+        username = request.POST['username']
+        password = request.POST['password']
+        powerid = 1000
+        if quanxian == "管理员":
+            powerid = -1
+        else:
+            powerid = 0
+        ret = userinfo.objects.create(name=name,
+                                      sex=sex,
+                                      job=job,
+                                      idcard=idcard,
+                                      phone=phone,
+                                      power_id=powerid,
+                                      username=username,
+                                      password=password
+                                      )
+        if ret != None:
+            return redirect('login.html')
+        else:
+            return render(request, 'login.html')
 
 # 管理员 - 用户管理 - 删除
 def delete_userinfo(request):

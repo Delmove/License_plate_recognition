@@ -14,7 +14,7 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.urls import path,re_path
+from django.urls import path, re_path
 from django.views.static import serve
 from car import views
 
@@ -45,7 +45,7 @@ urlpatterns = [
     path('operator/chargeRecord.html', views.operatorChargeRecord),
     path('operator/passwordEdit.html', views.operatorPasswordEdit),
     path('carschool_add', views.carschool_add),
-    path('update_carinfo',views.update_carinfo),
+    path('update_carinfo', views.update_carinfo),
     path('toBlackList', views.toBlackList),
     path('toTemp', views.toTemp),
     path('blacklist_add', views.blacklist_add),
@@ -53,6 +53,7 @@ urlpatterns = [
     path('toEnable', views.toEnable),
     path('delete_chargestandard', views.delete_chargestandard),
     path('add_chargestandard', views.add_chargestandard),
+    path('add_user', views.add_user),
     path('add_userinfo', views.add_userinfo),
     path('delete_userinfo', views.delete_userinfo),
     path('update_userinfo', views.update_userinfo),
@@ -60,6 +61,6 @@ urlpatterns = [
     path('operator_blacklist_add', views.operator_blacklist_add),
     path('operator_editpassword', views.operator_editpassword),
     path('operator_conCharges', views.operator_conCharges),
-    #图片访问路由设置
-    re_path("^media//$",serve)
+    # 图片访问路由设置
+    re_path("^media//$", serve)
 ]

@@ -53,7 +53,7 @@
 </header>
 <!-- Sidebar menu-->
 <div class="app-sidebar__overlay" data-toggle="sidebar"></div>
-<aside class="app-sidebar">
+<aside class="app-sidebar" >
     <div class="app-sidebar__user"><img class="app-sidebar__user-avatar" src="/static/images/logo.jpg"
                                         alt="User Image">
         <div>
@@ -61,7 +61,7 @@
             <p class="app-sidebar__user-designation">管理员</p>
         </div>
     </div>
-    <ul class="app-menu">
+    <ul class="app-menu" >
         <li><a class="app-menu__item" href="/admin/index.html"><i class="app-menu__icon fa fa-desktop"></i><span
                 class="app-menu__label">首页</span></a></li>
         <li class="treeview"><a class="app-menu__item" href="#" data-toggle="treeview"><i
@@ -112,11 +112,23 @@
                 class="app-menu__label">实时识别</span></a></li>
     </ul>
 </aside>
-<main class="app-content" style="background: url('../../static/images/1.jpg');background-size: 100%;display: flex">
-    <div>入口</div>
-    <iframe src="http://172.20.10.2:8081/video" width="500px" height="400px" style="display:inline-block;flex: 1"></iframe>
-    <div>出口</div>
-    <iframe src="http://10.4.48.105:8081/video" width="1000px" height="400px" style="display:inline-block;flex: 1"></iframe>
+<main class="app-content" style="background: url('../../static/images/1.jpg');background-size: 100%">
+    <div class="app-title" style="background: rgba(100,100,100,0.2);color: white">
+				<div>
+					<h1><i class="fa fa-list-ul"></i>实时识别</h1>
+				</div>
+				<ul class="app-breadcrumb breadcrumb side">
+					<li class="breadcrumb-item"><i class="fa fa-home fa-lg"></i></li>
+					<li class="breadcrumb-item">车辆进出管理系统</li>
+					<li class="breadcrumb-item active"><a href="/admin/imageScan.html">实时识别</a></li>
+				</ul>
+    </div>
+    <div style="display: flex">
+         <div class="btn btn-default btn-lg">入口</div>
+        <iframe  src="http://172.20.10.2:8081/video" width="500px" height="400px" style="display:inline-block;flex: 1"></iframe>
+        <div class="btn btn-default btn-lg">出口</div>
+        <iframe src="http://10.37.29.42:8081/video" width="1000px" height="400px" style="display:inline-block;flex: 1"></iframe>
+    </div>
 </main>
 <!-- Essential javascripts for application to work-->
 <script src="/static/js/jquery-3.2.1.min.js"></script>
