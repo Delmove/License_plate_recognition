@@ -42,7 +42,7 @@ def login(requset):
             return redirect("/operator/index.html")
         else:
             return render(requset, 'login.html', {'status': '用户名或密码错误，请重新登陆'})
-    return render(requset, 'login.html')
+    return render(requset, 'login.html')#
 
 
 # 管理员 - 首页
