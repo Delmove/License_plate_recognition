@@ -358,7 +358,7 @@ def adminLog(request):
     session_name = request.session.get('admin')  # 获取管理员的名字
     # import socket
     ip = get_ip(request)
-    # print(ip)
+    # print(ip)输出ip
     now = datetime.datetime.now().strftime('%Y-%m-%d')
     makeLog(ip)
     ret = log.objects.all().order_by('operation_time').reverse()
