@@ -21,7 +21,7 @@ from car import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.login),
-    path('login.html', views.login),
+    path('login.html', views.login),#delete project
     path('logout', views.logout),
     path('admin/index.html', views.adminIndex),
     path('admin/blackList.html', views.adminBlackList),
