@@ -67,7 +67,7 @@ def adminIndex(request):
         'money': row[0],
         'person_count': person_count,
     }
-    return render(request, 'admin/index.html', context)#1234414
+    return render(request, 'admin/index.html', context)#123441442424
 
 
 # 管理员 - 黑名单
